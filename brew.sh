@@ -35,6 +35,9 @@ brew install bash-completion2
 # Install tree
 brew install tree
 
+# Install axel - A light download accelerator for Linux.
+brew install axel
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
