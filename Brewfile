@@ -13,15 +13,14 @@ brew 'findutils'
 brew 'wget', args: ['with-iri']
 
 # Install more recent versions of some OS X tools
-brew 'vim', args: ['override-system-vi']
 brew 'homebrew/dupes/grep'
-
-# Install other useful binaries
-brew 'git'
-brew 'git-lfs'
-brew 'xctool'
 brew 'bash'
 brew 'bash-completion2'
+brew 'git'
+
+# Install other useful binaries
+brew 'git-lfs'
+brew 'xctool'
 brew 'axel'
 brew 'speedtest_cli'
 brew 'tree'
