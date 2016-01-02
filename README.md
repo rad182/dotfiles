@@ -44,7 +44,6 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-## Feedback
+## Credits
 
-Suggestions/improvements
-[welcome](https://github.com/rad182/dotfiles/issues)!
+* [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) and all the contributors
