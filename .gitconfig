@@ -178,3 +178,8 @@
 [merge "mergepbx"]
 	name = Xcode project files merger
 	driver = mergepbx %O %A %B
+
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
