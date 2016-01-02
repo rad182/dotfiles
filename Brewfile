@@ -1,5 +1,6 @@
 # taps
 tap 'caskroom/cask'
+tap 'caskroom/fonts'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 
@@ -28,7 +29,7 @@ brew 'mergepbx'
 brew 'rbenv'
 brew 'ruby-build'
 
-# install casks
+# Install casks
 cask 'google-chrome'
 cask 'google-drive'
 cask 'firefox'
@@ -50,3 +51,8 @@ cask 'slack'
 cask 'vlc'
 cask 'transmission'
 cask 'transmission-remote-gui'
+
+# Install Fonts
+brew cask install font-varela
+brew cask install font-varela-round
+brew cask install font-open-sans
