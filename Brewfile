@@ -25,6 +25,8 @@ brew 'axel'
 brew 'speedtest_cli'
 brew 'tree'
 brew 'mergepbx'
+brew 'rbenv'
+brew 'ruby-build'
 
 # install casks
 cask 'google-chrome'
