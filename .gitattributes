@@ -1,3 +1,2 @@
-# Automatically normalize line endings for all text-based files
-#* text=auto
-# Disabled because of https://github.com/mathiasbynens/dotfiles/issues/149 :(
+# https://medium.com/ios-os-x-development/a-better-way-to-automatically-merge-changes-in-your-xcode-project-files-3d83b3583fe4#.ksrg4zcmj
+*.pbxproj merge=mergepbx
