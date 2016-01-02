@@ -25,6 +25,7 @@ brew 'bash-completion2'
 brew 'axel'
 brew 'speedtest_cli'
 brew 'tree'
+brew 'mergepbx'
 
 # install casks
 cask 'google-chrome'
