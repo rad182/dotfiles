@@ -52,6 +52,7 @@ cask 'vlc'
 cask 'transmission'
 cask 'transmission-remote-gui'
 cask '1password'
+cask 'imageoptim'
 
 # Install Fonts
 brew cask install font-varela
