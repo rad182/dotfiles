@@ -41,9 +41,12 @@ function brew() {
 function rubygems() {
 	# initialize rbenv
 	eval "$(rbenv init -)"
-	# install ruby 2.3.0 is the latest as of this writing
-	rbenv install 2.3.0
-	rbenv global 2.3.0
+	# install latest ruby
+	RUBY_VERSION=`rbenv install -l | sed -n '/^[[:space:]]*[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}[[:space:]]*$/ h;${g;p;}'`
+	if ! rbenv versions --bare | grep $RUBY_VERSION; then
+  	rbenv install $RUBY_VERSION
+	fi
+	rbenv global $RUBY_VERSION
 	rbenv rehash
 	# install bundler gem
 	gem install bundler
