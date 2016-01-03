@@ -13,9 +13,7 @@ function doIt() {
 	source ~/.bash_profile;
 	# Install Homebrew
 	brew;
-	# Install rvm
-	rvm;
-	# Install gems
+	# Install ruby and gems
 	rubygems;
 }
 
@@ -37,18 +35,19 @@ function brew() {
 	brew brewdle
 	brew linkapps
 	brew cleanup
-}
-
-function rvm() {
-	if ! installed rvm; then
-		gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-		\curl -sSL https://get.rvm.io | bash -s stable --ruby
-	fi
 	brew cask cleanup
 }
 
 function rubygems() {
+	# initialize rbenv
+	eval "$(rbenv init -)"
+	# install ruby 2.3.0 is the latest as of this writing
+	rbenv install 2.3.0
+	rbenv global 2.3.0
+	rbenv rehash
+	# install bundler gem
 	gem install bundler
+	# install all gems from the Gemfile
 	bundle install
 }
 
@@ -64,5 +63,4 @@ fi;
 
 unset doIt;
 unset brew;
-unset rvm;
 unset rubygems;
