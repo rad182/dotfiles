@@ -41,6 +41,8 @@ function brew() {
 function rubygems() {
 	# initialize rbenv
 	eval "$(rbenv init -)"
+	# Add rbenv init to your shell to enable shims and autocompletion.
+	echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 	# install latest ruby
 	RUBY_VERSION=`rbenv install -l | sed -n '/^[[:space:]]*[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}[[:space:]]*$/ h;${g;p;}'`
 	if ! rbenv versions --bare | grep $RUBY_VERSION; then
