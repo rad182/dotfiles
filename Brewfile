@@ -51,6 +51,7 @@ cask 'slack'
 cask 'vlc'
 cask 'transmission'
 cask 'transmission-remote-gui'
+cask '1password'
 
 # Install Fonts
 brew cask install font-varela
