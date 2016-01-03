@@ -9,14 +9,14 @@ function doIt() {
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" -avh --no-perms . ~;
 	source ~/.bash_profile;
 	# Install Homebrew
-	brew;
+	homebrew;
 	# Install ruby and gems
 	rubygems;
 }
 
-function brew() {
+function homebrew() {
 	# Homebrew
-	if which brew > /dev/null; then
+	if ! type brew > /dev/null; then
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	fi
 
@@ -63,5 +63,5 @@ else
 fi;
 
 unset doIt;
-unset brew;
+unset homebrew;
 unset rubygems;
