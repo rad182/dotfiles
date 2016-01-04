@@ -8,6 +8,7 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "LICENSE" --exclude "Brewfile" --exclude "Gemfile" -avh --no-perms . ~;
 	source ~/.bash_profile;
+
 	# Install Homebrew
 	homebrew;
 	# Install ruby and gems
@@ -20,16 +21,10 @@ function homebrew() {
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	fi
 
-	# install casks
-	brew install caskroom/cask/brew-cask
-
-	# install brewdler
-	brew tap Homebrew/brewdler
-
 	# install everything from Brewfile
 	brew update
 	brew upgrade --all
-	brew brewdle
+	brew bundle
 	brew linkapps
 	brew cleanup
 	brew cask cleanup
