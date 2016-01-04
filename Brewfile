@@ -1,3 +1,5 @@
+cask_args appdir: '/Applications'
+
 # taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
