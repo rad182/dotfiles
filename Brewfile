@@ -57,6 +57,6 @@ cask '1password'
 cask 'imageoptim'
 
 # Install Fonts
-brew cask install font-varela
-brew cask install font-varela-round
-brew cask install font-open-sans
+cask 'font-varela'
+cask 'font-varela-round'
+cask 'font-open-sans'
