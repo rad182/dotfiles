@@ -24,7 +24,7 @@ function homebrew() {
 	# install everything from Brewfile
 	brew update
 	brew upgrade --all
-	brew bundle
+	brew bundle --verbose
 	brew linkapps
 	brew cleanup
 	brew cask cleanup
