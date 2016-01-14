@@ -56,6 +56,9 @@ cask 'transmission-remote-gui'
 cask '1password'
 cask 'imageoptim'
 cask 'iterm2'
+cask 'crashplan'
+cask 'coconutbattery'
+cask 'genymotion'
 
 # Install Fonts
 cask 'font-varela'
