@@ -183,3 +183,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
+
+[user]
+	name = Royce Albert Dy
+	email = rady182@me.com
