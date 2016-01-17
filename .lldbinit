@@ -1,3 +1,5 @@
+display @import UIKit
+target stop-hook add -o "target stop-hook disable"
 command regex rd 's/^[[:space:]]*$/po [[[UIApplication sharedApplication] keyWindow] recursiveDescription]/' 's/^(.+)$/po [%1 recursiveDescription]/'
 
 command alias reveal_load expr (void*)dlopen("/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/libReveal.dylib", 0x2);
