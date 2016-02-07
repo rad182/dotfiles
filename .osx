@@ -615,6 +615,10 @@ open "${HOME}/init/Solarized Dark.itermcolors"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Load iterm config
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/iterm2/"
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
