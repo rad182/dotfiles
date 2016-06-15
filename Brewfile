@@ -59,6 +59,7 @@ cask 'iterm2'
 cask 'crashplan'
 cask 'coconutbattery'
 cask 'genymotion'
+cask 'monolingual'
 
 # Install Fonts
 cask 'font-varela'
