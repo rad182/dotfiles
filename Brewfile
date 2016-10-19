@@ -30,6 +30,7 @@ brew 'tree'
 brew 'mergepbx'
 brew 'rbenv'
 brew 'ruby-build'
+brew 'trash'
 
 # Install casks
 cask 'google-chrome'
