@@ -61,6 +61,7 @@ cask 'crashplan'
 cask 'coconutbattery'
 cask 'genymotion'
 cask 'monolingual'
+cask 'rocket'
 
 # Install Fonts
 cask 'font-varela'
