@@ -189,5 +189,9 @@
 	clean = git-lfs clean %f
 
 [user]
-	name = Royce Albert Dy
+	name = Royce Dy
 	email = rady182@me.com
+	signingkey = 144BA35F
+
+[gpg]
+	program = gpg2

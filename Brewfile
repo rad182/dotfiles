@@ -33,6 +33,12 @@ brew 'ruby-build'
 brew 'trash'
 brew 'z'
 
+# Keybase and GPG
+brew 'gpg'
+brew 'keybase'
+brew 'gpg-agent'
+brew 'pinentry-mac'
+
 # Install casks
 cask 'google-chrome'
 cask 'google-drive'
