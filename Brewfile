@@ -60,6 +60,7 @@ cask 'keybase'
 cask 'java'
 cask 'kap'
 cask 'hyper'
+cask 'docker'
 
 # Install Fonts
 cask 'font-varela'
