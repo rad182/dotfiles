@@ -13,6 +13,7 @@ echo "installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "brew installing stuff"
+brew analytics off
 brew update
 brew upgrade --all
 brew bundle --verbose
