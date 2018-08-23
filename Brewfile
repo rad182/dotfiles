@@ -29,6 +29,7 @@ brew 'tree'
 brew 'mergepbx'
 brew 'trash'
 brew 'z'
+brew 'hub'
 
 # Keybase and GPG
 brew 'gpg'
