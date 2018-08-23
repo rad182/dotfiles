@@ -1,10 +1,12 @@
-# Royce Albert Dy's dotfiles
+# Royce Dy's dotfiles
 
 My config files to setup my OSX development environment heavily inspired from [Mathias's dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 ## Installation
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
+Download and Install [Meslo Powerline Font](https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf)
 
 ### Using Git and the bootstrap script
 
@@ -31,9 +33,9 @@ set -- -f; source bootstrap.sh
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```bash
-./.osx
+./.macos
 ```
 
 ## Credits
 
-* [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) and all the contributors
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) and all the contributors

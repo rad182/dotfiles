@@ -1,67 +1,58 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+# Ask for the administrator password upfront.
+sudo -v
 
-git pull origin master;
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE" --exclude "Brewfile" --exclude "Gemfile" -avh --no-perms . ~;
-	source ~/.bash_profile;
+echo "Hello $(whoami)! Let's get you set up."
 
-    # Ask for the administrator password upfront.
-    sudo -v
+echo "installing homebrew"
+# install homebrew https://brew.sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    # Keep-alive: update existing `sudo` time stamp until the script has finished.
-    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+echo "brew installing stuff"
+brew update
+brew upgrade --all
+brew bundle --verbose
+brew linkapps
+brew cleanup
+brew cask cleanup
 
-	# Install Homebrew
-	homebrew;
-	# Install ruby and gems
-	rubygems;
-}
+echo "installing powerline via pip"
+sudo pip install powerline-shell
 
-function homebrew() {
-	# Homebrew
-	if ! type brew > /dev/null; then
-		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	fi
+echo "linking dotfiles"
+ln -s "bin" "${HOME}/.bin"
+ln -s ".aliases" "${HOME}/.aliases"
+ln -s ".exports" "${HOME}/.exports"
+ln -s ".bash_profile" "${HOME}/.bash_profile"
+ln -s ".bash_prompt" "${HOME}/.bash_prompt"
+ln -s ".gitignore_global" "${HOME}/.gitignore_global"
+ln -s ".gitconfig" "${HOME}/.gitconfig"
+ln -s ".gitattributes" "${HOME}/.gitattributes"
+ln -s ".editorconfig" "${HOME}/.editorconfig"
+ln -s ".functions" "${HOME}/.functions"
+ln -s ".gemrc" "${HOME}/.gemrc"
+ln -s ".inputrc" "${HOME}/.inputrc"
+ln -s ".wgetrc" "${HOME}/.wgetrc"
+ln -s ".axelrc" "${HOME}/.axelrc"
+ln -s ".lldbinit" "${HOME}/.lldbinit"
+ln -s ".hushlogin" "${HOME}/.hushlogin"
+ln -s ".hyper.js" "${HOME}/.hyper.js"
 
-	# install everything from Brewfile
-	brew update
-	brew upgrade --all
-	brew bundle --verbose
-	brew linkapps
-	brew cleanup
-	brew cask cleanup
-}
+echo "installing node (via n-install)"
+curl -L https://git.io/n-install | bash
 
-function rubygems() {
-	# Initialize rbenv
-	eval "$(rbenv init -)"
-	# install latest ruby
-	RUBY_VERSION=`rbenv install -l | sed -n '/^[[:space:]]*[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}[[:space:]]*$/ h;${g;p;}'`
-	if ! rbenv versions --bare | grep $RUBY_VERSION; then
-  	rbenv install $RUBY_VERSION
-	fi
-	rbenv global $RUBY_VERSION
-	rbenv rehash
-	# install bundler gem
-	gem install bundler
-	# install all gems from the Gemfile
-	bundle install
-}
+echo "node --version: $(node --version)"
+echo "npm --version: $(npm --version)"
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
+# https://github.com/yarnpkg/yarn/issues/1116#issuecomment-354363271
+brew install yarn --without-node
 
-unset doIt;
-unset homebrew;
-unset rubygems;
+echo "installing gems"
+# install bundler gem
+gem install bundler
+# install all gems from the Gemfile
+bundle install

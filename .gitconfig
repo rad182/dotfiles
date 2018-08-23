@@ -184,9 +184,10 @@
 	driver = mergepbx %O %A %B
 
 [filter "lfs"]
-	smudge = git-lfs smudge %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 
 [user]
 	name = Royce Dy
@@ -194,4 +195,4 @@
 	signingkey = 144BA35F
 
 [gpg]
-	program = gpg2
+	program = /usr/local/bin/gpg2
