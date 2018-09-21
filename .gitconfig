@@ -195,4 +195,4 @@
 	signingkey = 144BA35F
 
 [gpg]
-	program = /usr/local/bin/gpg2
+	program = /usr/local/bin/gpg
