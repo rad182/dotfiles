@@ -43,6 +43,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
   - Install the sync extension to install the other extensions
 - Xcode https://developer.apple.com/download/more
 - Docker https://docs.docker.com/docker-for-mac/install/
+- Adware + Malware Blocking Hosts https://github.com/StevenBlack/hosts
 
 ## Credits
 
