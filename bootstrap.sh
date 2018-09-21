@@ -17,9 +17,7 @@ brew analytics off
 brew update
 brew upgrade --all
 brew bundle --verbose
-brew linkapps
 brew cleanup
-brew cask cleanup
 
 echo "installing powerline via pip"
 sudo pip install powerline-shell
