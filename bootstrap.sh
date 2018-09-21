@@ -24,8 +24,7 @@ sudo easy_install pip
 sudo pip install powerline-shell
 
 echo "linking dotfiles"
-ln -s "${PWD}/bin" "${HOME}/.bin"
-ln -s "${PWD}/.aliases" "${HOME}/"
+ln -s "${PWD}/.aliases" "${HOME}/.aliases"
 ln -s "${PWD}/.exports" "${HOME}/.exports"
 ln -s "${PWD}/.bash_profile" "${HOME}/.bash_profile"
 ln -s "${PWD}/.bash_prompt" "${HOME}/.bash_prompt"
@@ -50,6 +49,16 @@ echo "npm --version: $(npm --version)"
 
 # https://github.com/yarnpkg/yarn/issues/1116#issuecomment-354363271
 brew install yarn --without-node
+
+# Install rbenv
+echo "installing rbenv"
+brew install rbenv
+rbenv init
+echo "installing latest stable ruby"
+RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
+rbenv install $RUBY_VERSION
+rbenv global $RUBY_VERSION
+rbenv rehash
 
 echo "installing gems"
 # install bundler gem
