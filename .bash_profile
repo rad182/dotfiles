@@ -63,7 +63,9 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
   GPG_TTY=$(tty)
   export GPG_TTY
 else
-  eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+  # eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+	echo "Starting gpg-agent daemon"
+  eval $(gpg-agent --daemon)
 fi
 
 # Powerline
@@ -95,6 +97,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Fixes https://github.com/keybase/keybase-issues/issues/2798
-GPG_TTY=$(tty)
-export GPG_TTY
+# # Pinentry
+# if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
+#   source ~/.gnupg/.gpg-agent-info
+#   export GPG_AGENT_INFO
+#   GPG_TTY=$(tty)
+#   export GPG_TTY
+# else
+#   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+# fi
