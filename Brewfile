@@ -26,6 +26,7 @@ brew 'mergepbx'
 brew 'trash'
 brew 'z'
 brew 'hub'
+brew 'awscli'
 
 # Keybase and GPG
 brew 'gpg'
