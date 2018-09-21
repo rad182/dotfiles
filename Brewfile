@@ -3,9 +3,6 @@ cask_args appdir: '/Applications'
 # taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
-tap 'homebrew/dupes'
-tap 'homebrew/versions'
-tap 'facebook/fb'
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -17,7 +14,6 @@ brew 'findutils'
 brew 'wget', args: ['with-iri']
 
 # Install more recent versions of some OS X tools
-brew 'homebrew/dupes/grep'
 brew 'bash'
 brew 'bash-completion2'
 brew 'git'
@@ -33,12 +29,10 @@ brew 'hub'
 
 # Keybase and GPG
 brew 'gpg'
-brew 'gpg-agent'
 brew 'pinentry-mac'
 
 # Install casks
 cask 'google-chrome'
-cask 'google-drive'
 cask 'firefox'
 cask 'skype'
 cask 'the-unarchiver'
@@ -57,7 +51,6 @@ cask 'coconutbattery'
 cask 'genymotion'
 cask 'rocket'
 cask 'keybase'
-cask 'java'
 cask 'kap'
 cask 'hyper'
 cask 'docker'
