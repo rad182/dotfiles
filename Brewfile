@@ -27,6 +27,7 @@ brew 'trash'
 brew 'z'
 brew 'hub'
 brew 'awscli'
+brew 'dnscrypt-proxy'
 
 # Keybase and GPG
 brew 'gpg'
