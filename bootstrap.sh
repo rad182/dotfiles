@@ -20,6 +20,7 @@ brew bundle --verbose
 brew cleanup
 
 echo "installing powerline via pip"
+sudo easy_install pip
 sudo pip install powerline-shell
 
 echo "linking dotfiles"
