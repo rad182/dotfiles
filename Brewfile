@@ -56,6 +56,8 @@ cask 'keybase'
 cask 'kap'
 cask 'hyper'
 cask 'docker'
+cask 'graphql-playground'
+cask 'react-native-debugger'
 
 # Install Fonts
 cask 'font-varela'
