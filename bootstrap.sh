@@ -43,6 +43,7 @@ ln -s "${PWD}/.hyper.js" "${HOME}/.hyper.js"
 
 echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
+. ${HOME}/.bash_profile
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
