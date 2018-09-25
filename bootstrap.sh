@@ -40,6 +40,7 @@ ln -s "${PWD}/.axelrc" "${HOME}/.axelrc"
 ln -s "${PWD}/.lldbinit" "${HOME}/.lldbinit"
 ln -s "${PWD}/.hushlogin" "${HOME}/.hushlogin"
 ln -s "${PWD}/.hyper.js" "${HOME}/.hyper.js"
+ln -s "${PWD}/powerline-shell" "${HOME}/.config/"
 
 echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
