@@ -58,6 +58,8 @@ cask 'hyper'
 cask 'docker'
 cask 'graphql-playground'
 cask 'react-native-debugger'
+cask 'postman'
+cask 'sequel-pro'
 
 # Install Fonts
 cask 'font-varela'
