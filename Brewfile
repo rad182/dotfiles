@@ -60,6 +60,7 @@ cask 'graphql-playground'
 cask 'react-native-debugger'
 cask 'postman'
 cask 'sequel-pro'
+cask 'quicklook-json'
 
 # Install Fonts
 cask 'font-varela'
