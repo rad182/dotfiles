@@ -98,3 +98,18 @@ eval "$(direnv hook bash)"
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+# Setting PATH for Python 2.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rad182/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/rad182/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rad182/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/rad182/Downloads/google-cloud-sdk/completion.bash.inc'; fi
