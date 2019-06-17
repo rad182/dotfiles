@@ -90,11 +90,6 @@ if which rbenv > /dev/null; then
 	eval "$(rbenv init -)"; 
 fi
 
-if command -v brew >/dev/null 2>&1; then
-	# Load rupa's z if installed
-	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
-fi
-
 # Powerline
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
@@ -120,9 +115,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # direnv
 eval "$(direnv hook zsh)"
-
-# z rupa
-. /usr/local/etc/profile.d/z.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -153,6 +145,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler docker npm osx pod)
+plugins=(git z bundler docker npm osx pod)
 
 source $ZSH/oh-my-zsh.sh
