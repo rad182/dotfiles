@@ -1,5 +1,5 @@
 {
-	"segments": ["virtual_env", "ssh", "cwd", "git", "jobs", "root"],
+	"segments": ["ssh", "cwd", "git", "root"],
 	"cwd": {
 		"max_depth": 3
 	}
