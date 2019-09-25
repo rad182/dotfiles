@@ -50,6 +50,9 @@ alias play="open -a 'Xcode' ~/.scratchpad.playground"
 # Clear the derived data folder
 alias fuxcode='rm -Rf ~/Library/Developer/Xcode/DerivedData/*'
 
+# Delete all node_modules
+alias rmnpm='find . -name node_modules -type d -prune -exec trash {} +'
+
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
