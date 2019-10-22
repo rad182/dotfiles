@@ -61,6 +61,8 @@ cask 'react-native-debugger'
 cask 'postman'
 cask 'sequel-pro'
 cask 'quicklook-json'
+cask 'ransomwhere'
+cask 'oversight'
 
 # Install Fonts
 cask 'font-varela'
