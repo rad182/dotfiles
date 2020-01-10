@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 # taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
+tap 'teamookla/speedtest'
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -20,7 +21,7 @@ brew 'git'
 
 # Install other useful binaries
 brew 'axel'
-brew 'speedtest_cli'
+brew 'speedtest'
 brew 'tree'
 brew 'mergepbx'
 brew 'trash'
