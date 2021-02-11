@@ -29,6 +29,7 @@ brew 'z'
 brew 'hub'
 brew 'awscli'
 brew 'dnscrypt-proxy'
+brew 'watchman'
 
 # Keybase and GPG
 brew 'gpg'
