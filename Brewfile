@@ -30,6 +30,7 @@ brew 'hub'
 brew 'awscli'
 brew 'dnscrypt-proxy'
 brew 'watchman'
+brew 'direnv'
 
 # Keybase and GPG
 brew 'gpg'
