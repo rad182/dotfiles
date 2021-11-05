@@ -66,6 +66,7 @@ cask 'sequel-pro'
 cask 'quicklook-json'
 cask 'ransomwhere'
 cask 'oversight'
+cask 'mailtrackerblocker'
 
 # Install Fonts
 cask 'font-varela'
