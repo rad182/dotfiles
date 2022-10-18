@@ -204,3 +204,5 @@
 
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg
+[branch]
+	autosetuprebase = always
