@@ -1,8 +1,5 @@
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -99,22 +96,22 @@ if which rbenv > /dev/null; then
 fi
 
 # Powerline
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
+#function powerline_precmd() {
+#    PS1="$(powerline-shell --shell zsh $?)"
+#}
 
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
+#function install_powerline_precmd() {
+#  for s in "${precmd_functions[@]}"; do
+#    if [ "$s" = "powerline_precmd" ]; then
+#      return
+#    fi
+#  done
+#  precmd_functions+=(powerline_precmd)
+#}
 
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
+#if [ "$TERM" != "linux" ]; then
+#    install_powerline_precmd
+#fi
 
 # Android
 export ANDROID_HOME=${HOME}/Library/Android/sdk
@@ -186,7 +183,5 @@ PATH_TO_NPM_COMPLETION="/Users/rad182/.nvm/versions/node/v12.16.2/bin/../lib/nod
 
 export PATH="/usr/local/opt/terraform@0.12/bin:$PATH"
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
