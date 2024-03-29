@@ -1,0 +1,88 @@
+{
+	"description": "Change Control + Shift",
+	"manipulators": [
+		{
+			"description": "control + left_shift + y -> page up",
+			"from": {
+				"key_code": "y",
+				"modifiers": {
+					"mandatory": ["control", "left_shift"],
+					"optional": ["any"]
+				}
+			},
+			"to": [
+				{
+					"key_code": "page_up"
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"description": "control + left_shift + h -> page down",
+			"from": {
+				"key_code": "h",
+				"modifiers": {
+					"mandatory": ["control", "left_shift"],
+					"optional": ["any"]
+				}
+			},
+			"to": [
+				{
+					"key_code": "page_down"
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"description": "control + left_shift + u -> mouse left click",
+			"from": {
+				"key_code": "u",
+				"modifiers": {
+					"mandatory": ["control", "left_shift"],
+					"optional": ["any"]
+				}
+			},
+			"to": [
+				{
+					"pointing_button": "button1"
+				}
+			],
+			"type": "basic"
+		},
+
+		{
+			"from": {
+				"key_code": "i",
+				"modifiers": {
+					"mandatory": ["control", "left_shift"],
+					"optional": ["any"]
+				}
+			},
+			"to": [
+				{
+					"mouse_key": {
+						"vertical_wheel": -64
+					}
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"from": {
+				"key_code": "k",
+				"modifiers": {
+					"mandatory": ["control", "left_shift"],
+					"optional": ["any"]
+				}
+			},
+			"to": [
+				{
+					"mouse_key": {
+						"vertical_wheel": 64
+					}
+				}
+			],
+			"type": "basic"
+		}
+	]
+}
