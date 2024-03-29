@@ -49,6 +49,22 @@
 			],
 			"type": "basic"
 		},
+		{
+			"description": "control + left_shift + o -> f12",
+			"from": {
+				"key_code": "o",
+				"modifiers": {
+					"mandatory": ["control", "left_shift"],
+					"optional": ["any"]
+				}
+			},
+			"to": [
+				{
+					"key_code": "f12"
+				}
+			],
+			"type": "basic"
+		},
 
 		{
 			"from": {
