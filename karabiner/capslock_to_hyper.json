@@ -1,0 +1,32 @@
+{
+	"description": "[HyperIJKL] Capslock to Hyper",
+	"manipulators": [
+		{
+			"description": "capslock (press) -> esc; capslock (hold) -> Hyper",
+			"type": "basic",
+			"from": {
+				"key_code": "caps_lock",
+				"modifiers": {
+					"optional": ["any"]
+				}
+			},
+			"to": {
+				"set_variable": {
+					"name": "HYPER",
+					"value": 1
+				}
+			},
+			"to_after_key_up": {
+				"set_variable": {
+					"name": "HYPER",
+					"value": 0
+				}
+			},
+			"to_if_alone": [
+				{
+					"key_code": "escape"
+				}
+			]
+		}
+	]
+}
