@@ -2,8 +2,6 @@
 	"description": "[HyperIJKL] Text Navigation",
 	"manipulators": [
 		{
-			"description": "i -> up",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -11,6 +9,7 @@
 					"value": 1
 				}
 			],
+			"description": "i -> up",
 			"from": {
 				"key_code": "i",
 				"modifiers": {
@@ -21,11 +20,10 @@
 				{
 					"key_code": "up_arrow"
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "command + i -> top of the page",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -33,6 +31,7 @@
 					"value": 1
 				}
 			],
+			"description": "command + i -> top of the page",
 			"from": {
 				"key_code": "i",
 				"modifiers": {
@@ -45,11 +44,10 @@
 					"key_code": "up_arrow",
 					"modifiers": ["command"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "` -> ctrl + `",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -57,6 +55,7 @@
 					"value": 1
 				}
 			],
+			"description": "` -> ctrl + `",
 			"from": {
 				"key_code": "grave_accent_and_tilde",
 				"modifiers": {
@@ -68,11 +67,10 @@
 					"key_code": "grave_accent_and_tilde",
 					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "- -> ctrl + -",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -80,6 +78,7 @@
 					"value": 1
 				}
 			],
+			"description": "- -> ctrl + -",
 			"from": {
 				"key_code": "hyphen",
 				"modifiers": {
@@ -91,11 +90,10 @@
 					"key_code": "hyphen",
 					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "k -> down",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -103,6 +101,7 @@
 					"value": 1
 				}
 			],
+			"description": "k -> down",
 			"from": {
 				"key_code": "k",
 				"modifiers": {
@@ -113,11 +112,10 @@
 				{
 					"key_code": "down_arrow"
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "command + k -> bottom of the page",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -125,6 +123,7 @@
 					"value": 1
 				}
 			],
+			"description": "command + k -> bottom of the page",
 			"from": {
 				"key_code": "k",
 				"modifiers": {
@@ -137,11 +136,10 @@
 					"key_code": "down_arrow",
 					"modifiers": ["command"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "j -> left",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -149,6 +147,7 @@
 					"value": 1
 				}
 			],
+			"description": "j -> left",
 			"from": {
 				"key_code": "j",
 				"modifiers": {
@@ -159,11 +158,10 @@
 				{
 					"key_code": "left_arrow"
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "l -> right",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -171,6 +169,7 @@
 					"value": 1
 				}
 			],
+			"description": "l -> right",
 			"from": {
 				"key_code": "l",
 				"modifiers": {
@@ -181,11 +180,10 @@
 				{
 					"key_code": "right_arrow"
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "y -> page up",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -193,6 +191,7 @@
 					"value": 1
 				}
 			],
+			"description": "y -> page up",
 			"from": {
 				"key_code": "y",
 				"modifiers": {
@@ -203,11 +202,10 @@
 				{
 					"key_code": "page_up"
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "h -> page down",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -215,6 +213,7 @@
 					"value": 1
 				}
 			],
+			"description": "h -> page down",
 			"from": {
 				"key_code": "h",
 				"modifiers": {
@@ -225,11 +224,10 @@
 				{
 					"key_code": "page_down"
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "a -> home",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -237,6 +235,7 @@
 					"value": 1
 				}
 			],
+			"description": "a -> home",
 			"from": {
 				"key_code": "a",
 				"modifiers": {
@@ -245,13 +244,13 @@
 			},
 			"to": [
 				{
-					"key_code": "home"
+					"key_code": "a",
+					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "e -> end",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -259,6 +258,7 @@
 					"value": 1
 				}
 			],
+			"description": "e -> end",
 			"from": {
 				"key_code": "e",
 				"modifiers": {
@@ -267,13 +267,13 @@
 			},
 			"to": [
 				{
-					"key_code": "end"
+					"key_code": "e",
+					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "c -> ctrl + c",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -281,6 +281,7 @@
 					"value": 1
 				}
 			],
+			"description": "c -> ctrl + c",
 			"from": {
 				"key_code": "c",
 				"modifiers": {
@@ -292,11 +293,10 @@
 					"key_code": "c",
 					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "x -> ctrl + x",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -304,6 +304,7 @@
 					"value": 1
 				}
 			],
+			"description": "x -> ctrl + x",
 			"from": {
 				"key_code": "x",
 				"modifiers": {
@@ -315,11 +316,10 @@
 					"key_code": "x",
 					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "z -> ctrl + z",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -327,6 +327,7 @@
 					"value": 1
 				}
 			],
+			"description": "z -> ctrl + z",
 			"from": {
 				"key_code": "z",
 				"modifiers": {
@@ -338,11 +339,10 @@
 					"key_code": "z",
 					"modifiers": ["left_control"]
 				}
-			]
+			],
+			"type": "basic"
 		},
 		{
-			"description": "g -> f12",
-			"type": "basic",
 			"conditions": [
 				{
 					"name": "HYPER",
@@ -350,6 +350,7 @@
 					"value": 1
 				}
 			],
+			"description": "g -> f12",
 			"from": {
 				"key_code": "g",
 				"modifiers": {
@@ -360,7 +361,8 @@
 				{
 					"key_code": "f12"
 				}
-			]
+			],
+			"type": "basic"
 		}
 	]
 }
