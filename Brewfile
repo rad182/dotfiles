@@ -31,6 +31,7 @@ brew 'awscli'
 brew 'dnscrypt-proxy'
 brew 'watchman'
 brew 'direnv'
+brew 'ripgrep'
 
 # Keybase and GPG
 brew 'gpg'
